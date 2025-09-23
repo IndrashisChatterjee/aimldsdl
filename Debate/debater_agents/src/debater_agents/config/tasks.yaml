@@ -1,17 +1,24 @@
-research_task:
+propose:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
+    your task is to propose in favour of the topic {topic}
+    Provide clear and convincing arguments in favour of the topic: {topic} that is relevant and interesting.
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+    A list with 10 bullet points of the most convinving arguments favoured about the topic
+  agent: debater
+  output_file: output/propose.md
 
-reporting_task:
+oppose:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    your task is to oppose the topic {topic}
+    Provide clear and convincing arguments in against of the topic: {topic} that is relevant and interesting.
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    A list with 10 bullet points of the most convinving arguments against the topic
+  agent: debater
+  output_file: output/oppose.md
+decide:
+  description: >
+    Review the arguments presented by the debaters and decide which side is more convincing.
+  expected_output: >
+    Your decision on which side is more convincing, and why.
+  agent: judge
+  output_file: output/decide.md
