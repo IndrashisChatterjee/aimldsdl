@@ -15,7 +15,7 @@ Each agent operates independently, using its own logic and tools, but interacts 
 ### Workflow
 
 1. **Proposer** generates arguments supporting a given topic.
-2. **Opposer** responds with counterarguments.
+2. **Opposer** responds with counter arguments.
 3. **Judge** reviews both sets of arguments and decides the outcome.
 4. Results are saved in the `output/` folder as markdown files (`propose.md`, `oppose.md`, `decide.md`).
 
@@ -56,14 +56,14 @@ This will execute the debate workflow and generate output files with each agent'
 ## Output
 
 - `output/propose.md`: Arguments from the Proposer.
-- `output/oppose.md`: Counterarguments from the Opposer.
+- `output/oppose.md`: Counter arguments from the Opposer.
 - `output/decide.md`: Judgement and reasoning from the Judge.
 
 ## Understanding Your Crew
 
 Agents are defined in `config/agents.yaml` and tasks in `config/tasks.yaml`. Each agent has a unique role and set of tools, collaborating and competing to simulate a real debate.
 
-## Support
+## CrewAI Support Links
 
 For support, questions, or feedback:
 - [Documentation](https://docs.crewai.com)
