@@ -2,9 +2,7 @@
 import sys
 import warnings
 
-from datetime import datetime
-
-from debater_agents.crew import DebaterAgents
+from debater_agents.src.debater_agents.crew import DebaterAgents
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 

@@ -4,7 +4,7 @@ import requests
 # Read API base URL securely from Streamlit secrets
 API_BASE = st.secrets.get("API_BASE")
 
-st.title("DebaterAgents: AI Debate App")
+st.title("Debater Agents: AI Debate App")
 
 topic = st.text_input("Enter a debate topic:")
 
