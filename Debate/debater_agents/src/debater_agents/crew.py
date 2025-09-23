@@ -1,5 +1,21 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
+import opik
+import os
+from dotenv import load_dotenv
+from opik.integrations.crewai import track_crewai
+#from opik.integrations.genai import track_genai
+
+load_dotenv(override=True)
+
+opik.configure(use_local=False,
+               api_key=os.getenv ('OPIK_API_KEY'),
+               automatic_approvals=True)
+
+track_crewai(project_name="CrewAI - Debate App")
+#track_genai(project_name="GenAI - Debate App")
+
+
 
 
 @CrewBase
