@@ -7,7 +7,7 @@ Welcome to the DebaterAgents Crew project, powered by [crewAI](https://crewai.co
 DebaterAgents Crew simulates a structured debate with three specialized agents:
 
 - **Proposer Agent:** Introduces and argues in favor of a topic.
-- **Opposer Agent:** Presents counterarguments and opposes the topic.
+- **Opposer Agent:** Presents counter arguments and opposes the topic.
 - **Judge Agent:** Evaluates both sides, analyzes the arguments, and delivers a final judgement (in favor or against).
 
 Each agent operates independently, using its own logic and tools, but interacts with others to simulate a realistic debate. The system is highly customizable—agents, tasks, and debate topics can be configured to suit your needs.
@@ -71,4 +71,4 @@ For support, questions, or feedback:
 - [Discord](https://discord.com/invite/X4JWnZnxPb)
 - [Chat with our docs](https://chatg.pt/DWjSBZn)
 
-Let's create wonders together with the power and simplicity of crewAI.
+Let's create wonders together with the power and simplicity of crewAI
