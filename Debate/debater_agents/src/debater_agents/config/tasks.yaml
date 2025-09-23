@@ -19,6 +19,8 @@ decide:
   description: >
     Review the arguments presented by the debaters and decide which side is more convincing.
   expected_output: >
-    Your decision on which side is more convincing, and why.
+    Two sections:
+    Verdict: in favour of the topic - {topic} or against the topic - {topic}
+    Reason : it states the decision on which side is more convincing, and why within 200 words covering all points.
   agent: judge
   output_file: output/decide.md

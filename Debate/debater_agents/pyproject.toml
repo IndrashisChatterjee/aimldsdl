@@ -11,9 +11,6 @@ dependencies = [
 [project.scripts]
 debater_agents = "debater_agents.main:run"
 run_crew = "debater_agents.main:run"
-train = "debater_agents.main:train"
-replay = "debater_agents.main:replay"
-test = "debater_agents.main:test"
 
 [build-system]
 requires = ["hatchling"]
