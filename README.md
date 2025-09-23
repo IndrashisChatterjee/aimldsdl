@@ -2,7 +2,7 @@
 
 A collection of AI, Machine Learning, Deep Learning, and Structured Data Learning projects and experiments.
 
-This repository gathers multiple projects, notebooks, and agent-based systems that demonstrate practical applications of modern AI/ML/DL techniques. Each subdirectory contains self-contained resources, code samples, and documentation for learning and experimentation.
+This repository gathers multiple projects, notebooks, and agent-based systems that demonstrate practical applications of modern AI/ML/DL techniques. Each subdirectory contains self-contained resources and guides for running experiments, tracking results, and integrating with external APIs.
 
 ---
 
@@ -18,6 +18,13 @@ This repository gathers multiple projects, notebooks, and agent-based systems th
   - Includes a web app (Streamlit frontend, FastAPI backend) for interactive debates.
   - Output markdown files for arguments and decisions.
   - [Project README](Debate/debater_agents/README.md)
+
+- `OpenAISDK/` — OpenAI Agents SDK with MLflow in Databricks
+  - Integrates OpenAI Agents SDK with MLflow for experiment tracking and model execution in Databricks.
+  - Demonstrates how to use external APIs (e.g. Gemini) with OpenAI-compatible interfaces.
+  - Asynchronous agent execution and result visualization in notebooks.
+  - Main notebook: [`OpenAISDK/agents sdk.ipynb`](OpenAISDK/agents%20sdk.ipynb)
+  - [Project README](OpenAISDK/readme.md)
 
 <!-- Add more project summaries here if needed -->
 
@@ -59,6 +66,33 @@ cd aimldsdl
     ```
 5. Use the app: Enter a debate topic and view arguments/decision.
 
+### Running OpenAI Agents SDK with MLflow in Databricks
+
+1. Open `OpenAISDK/agents sdk.ipynb` in Databricks.
+2. Ensure all required libraries are installed:
+    ```python
+    !pip install openai-agents openai mlflow dotenv
+    dbutils.library.restartPython()
+    ```
+3. Set environment variables and API keys (`.env` file recommended).
+4. Run notebook cells sequentially to:
+    - Import libraries, load environment variables.
+    - Login and set up MLflow experiment tracking.
+    - Configure external API clients (e.g., Gemini with OpenAI schema).
+    - Define and run agents asynchronously.
+    - Visualize results in Markdown.
+5. Track experiments and results in MLflow UI.
+
+---
+
+## Prerequisites
+
+- Databricks workspace (for OpenAISDK project)
+- Python environment (compatible with Databricks)
+- API keys for OpenAI and external providers (e.g., Google Gemini)
+- MLflow Tracking Server (or Databricks MLflow integration)
+- Set secrets securely using Databricks secrets or environment variables
+
 ---
 
 ## Contributing
@@ -85,3 +119,6 @@ Created by [Indrashis Chatterjee](https://github.com/IndrashisChatterjee).
 - [crewAI documentation](https://docs.crewai.com)
 - [crewAI GitHub](https://github.com/joaomdmoura/crewai)
 - [Knowledge Distillation Paper (Hinton et al.)](https://arxiv.org/abs/1503.02531)
+- [OpenAI Agents SDK Documentation](https://github.com/openai/openai-agents)
+- [MLflow Documentation](https://mlflow.org/docs/latest/index.html)
+- [Databricks Documentation](https://docs.databricks.com/)
