@@ -1,0 +1,23 @@
+[project]
+name = "debater_agents"
+version = "0.1.0"
+description = "debater_agents using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.193.2,<1.0.0"
+]
+
+[project.scripts]
+debater_agents = "debater_agents.main:run"
+run_crew = "debater_agents.main:run"
+train = "debater_agents.main:train"
+replay = "debater_agents.main:replay"
+test = "debater_agents.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
