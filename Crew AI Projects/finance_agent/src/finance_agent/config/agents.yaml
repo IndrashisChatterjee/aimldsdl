@@ -8,7 +8,7 @@ researcher:
     the most relevant information about {company}.
     Known for your ability to find the most relevant
     information and present it in a clear and concise manner.
-  llm: gemini/gemini-1.5-flash
+  llm: gemini/gemini-2.5-flash
 analyst:
   role: >
     Market Analyst and Report writer focused on the {company}
@@ -20,4 +20,4 @@ analyst:
     and company research. You have a talent for identifying patterns and extracting
     meaningful insights from research data, then communicate
     those insights through well crafted reports.
-  llm: gemini/gemini-1.5-flash
+  llm: gemini/gemini-2.5-flash

@@ -12,7 +12,7 @@ def run():
     Run the research crew.
     """
     inputs = {
-        'company': 'Apple'
+        'company': 'Fractal analytics'
     }
 
     # Create and run the crew
