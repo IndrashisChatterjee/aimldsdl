@@ -1,9 +1,9 @@
+# src/financial_researcher/crew.py
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from crewai_tools import SerperDevTool
 import os
 from dotenv import load_dotenv
-import asyncio
 
 load_dotenv(override=True)
 
@@ -48,22 +48,3 @@ class ResearchCrew():
             process=Process.sequential,
             verbose=True,
         )
-
-    def run_crew_blocking(self, inputs: dict):
-        """
-        Blocking method to run the crew with given inputs.
-        """
-        self.crew().kickoff(inputs=inputs)
-
-    async def execute_async(self, inputs: dict):
-        """
-        Asynchronously run the crew process and return the report output.
-        """
-        loop = asyncio.get_event_loop()
-        await loop.run_in_executor(None, self.run_crew_blocking, inputs)
-        try:
-            with open("output/report.md", "r", encoding="utf-8") as f:
-                report_content = f.read()
-        except FileNotFoundError:
-            report_content = "No report.md found."
-        return report_content

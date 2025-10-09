@@ -1,54 +1,67 @@
 # FinanceAgent Crew
 
-Welcome to the FinanceAgent Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Welcome to the FinanceAgent Crew project, powered by [crewAI](https://crewai.com). This template helps you set up a multi-agent AI system with ease, leveraging the flexible framework provided by crewAI. Agents collaborate on complex tasks, maximizing their collective intelligence and capabilities.
 
 ## Installation
 
-Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+Ensure you have Python >=3.10 <3.14 installed. This project uses [UV](https://docs.astral.sh/uv/) for dependency management.
 
-First, if you haven't already, install uv:
-
+Install uv:
 ```bash
 pip install uv
 ```
 
-Next, navigate to your project directory and install the dependencies:
-
-(Optional) Lock the dependencies and install them by using the CLI command:
+Install dependencies:
 ```bash
-crewai install
+uv pip install -r requirements.txt
 ```
-### Customizing
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+To generate a `requirements.txt` from your environment:
+```bash
+uv pip freeze > requirements.txt
+```
 
-- Modify `src/finance_agent/config/agents.yaml` to define your agents
-- Modify `src/finance_agent/config/tasks.yaml` to define your tasks
-- Modify `src/finance_agent/crew.py` to add your own logic, tools and specific args
-- Modify `src/finance_agent/main.py` to add custom inputs for your agents and tasks
+## Configuration
+
+- Add your `OPENAI_API_KEY` and other secrets to the `.env` file.
+- Edit `src/finance_agent/config/agents.yaml` to define agents.
+- Edit `src/finance_agent/config/tasks.yaml` to define tasks.
+- Edit `src/finance_agent/crew.py` to customize logic, tools, and arguments.
 
 ## Running the Project
 
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
-
+To run the crew and generate a report:
 ```bash
-$ crewai run
+crewai run
 ```
 
-This command initializes the finance_agent Crew, assembling the agents and assigning them tasks as defined in your configuration.
+## FastAPI Backend & Streamlit Frontend
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+This project includes a FastAPI backend and a Streamlit UI for interactive execution.
+
+### Start the FastAPI backend:
+```bash
+uvicorn src.finance_agent.backend.api:app --reload
+```
+
+### Start the Streamlit frontend:
+```bash
+streamlit run src/finance_agent/ui.py
+```
+
+- Enter your input in the UI and click "Run Crew".
+- The output report will be displayed in an expander.
 
 ## Understanding Your Crew
 
-The finance_agent Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+The FinanceAgent Crew consists of multiple AI agents, each with unique roles and tools. Agents and tasks are configured in the `config` directory.
 
 ## Support
 
-For support, questions, or feedback regarding the FinanceAgent Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
+For support, questions, or feedback:
+- [Documentation](https://docs.crewai.com)
+- [GitHub repository](https://github.com/joaomdmoura/crewai)
+- [Discord](https://discord.com/invite/X4JWnZnxPb)
 - [Chat with our docs](https://chatg.pt/DWjSBZn)
 
-Let's create wonders together with the power and simplicity of crewAI.
+Let's create wonders together with crewAI
