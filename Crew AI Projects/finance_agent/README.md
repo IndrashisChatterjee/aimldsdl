@@ -2,45 +2,6 @@
 
 Welcome to the FinanceAgent Crew project, powered by [crewAI](https://crewai.com). This template helps you set up a multi-agent AI system with ease, leveraging the flexible framework provided by crewAI. Agents collaborate on complex tasks, maximizing their collective intelligence and capabilities.
 
-## Folder Structure
-
-```
-finance_agent/
-│   .env
-│   .gitignore
-│   pyproject.toml
-│   README.md
-│   requirements.txt
-│   uv.lock
-│
-├── .streamlit/
-│     secrets.toml
-│
-├── knowledge/
-│     user_preference.txt
-│
-├── output/
-│     report.md
-│
-├── src/
-│   └── finance_agent/
-│         __init__.py
-│         crew.py
-│         crew_old.py
-│         main.py
-│         backend/
-│             __init__.py
-│             api.py
-│         config/
-│             agents.yaml
-│             tasks.yaml
-│         frontend/
-│             app.py
-│         tools/
-│             __init__.py
-│             custom_tool.py
-```
-
 ## Installation
 
 Ensure you have Python >=3.10 <3.14 installed. This project uses [UV](https://docs.astral.sh/uv/) for dependency management.
